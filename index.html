@@ -30,18 +30,20 @@
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>PHP</li>
-      <li>JSON</li>
-      <li>JavaScript (Basic)</li>
-      <li>MySQL & phpMyAdmin</li>
-      <li>REST APIs</li>
-    </ul>
-  </section>
-
+  <h2>Skills</h2>
+  <ul>
+    <?php
+    $skills = [];
+    if (file_exists('skills.json')) {
+        $skills = json_decode(file_get_contents('skills.json'), true);
+        if (!is_array($skills)) $skills = [];
+    }
+    foreach ($skills as $skill) {
+        echo "<li>" . htmlspecialchars($skill) . "</li>";
+    }
+    ?>
+  </ul>
+</section>
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
