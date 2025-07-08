@@ -23,7 +23,10 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a junior web developer passionate about creating functional and visually appealing websites. I specialize in HTML, CSS, PHP, and JSON, and I'm currently enhancing my JavaScript skills.</p>
+    <p>
+      I am a junior web developer passionate about creating functional and visually appealing websites. 
+      I specialize in HTML, CSS, PHP, and JSON, and I'm currently enhancing my JavaScript skills.
+    </p>
   </section>
 
   <section id="skills">
@@ -50,13 +53,35 @@
       <h3>Portfolio Website</h3>
       <p>Responsive personal site built with HTML, CSS, and a touch of JS for interactivity.</p>
     </div>
+    <!-- Video Upload Form -->
+    <div class="video-upload">
+      <h3>Upload a Project Video</h3>
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="videoUpload">Select video (MP4, WebM, etc):</label>
+        <input type="file" name="video" id="videoUpload" accept="video/*" required>
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+    <!-- Example of displaying a video -->
+    <div class="project-video">
+      <h4>Sample Project Video</h4>
+      <video width="320" height="240" controls>
+        <source src="uploads/sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Short description of the project shown in the video.</p>
+    </div>
+    <!--
+      To display all uploaded videos automatically, you would use a PHP loop here. 
+      Let me know if you want example code for that!
+    -->
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:uchechukwuonwuegbuna@gmail.com">uchechukwuonwuegbuna@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/ucmore01">github.com/ucmore01</a></p>
-    
+  </section>
 
   <footer>
     <p>&copy; 2025 Uchechukwu Anthony. All rights reserved.</p>
