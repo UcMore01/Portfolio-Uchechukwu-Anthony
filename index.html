@@ -3,35 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uchechukwu Anthony | Portfolio</title>
+  <title>Uchechukwu Anthony | Junior Web Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Uchechukwu Anthony</h1>
-    <p>Web Developer</p>
+    <p>Junior Web Developer</p>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a web developer passionate about building functional and visually appealing websites and web applications.
-      </p>
-    </section>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section id="projects">
-      <h2>My Projects (Video Gallery)</h2>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a junior web developer passionate about creating functional and visually appealing websites. 
+      I specialize in HTML, CSS, PHP, and JSON, and I'm currently enhancing my JavaScript skills.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>PHP</li>
+      <li>JSON</li>
+      <li>JavaScript (Basic)</li>
+      <li>MySQL & phpMyAdmin</li>
+      <li>REST APIs</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Marketplace Backend API</h3>
+      <p>Core PHP API for user registration, login, and product management with JSON responses.</p>
+      <a href="https://github.com/Uchechukwu-Anthony/marketplace-api">GitHub Repo</a>
+    </div>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Responsive personal site built with HTML, CSS, and a touch of JS for interactivity.</p>
+    </div>
+
+      <h2>My Projects (Gallery)</h2>
       <!-- PHP code to display all uploaded videos -->
       <?php include 'videos.php'; ?>
-    </section>
+    
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:uchechukwuonwuegbuna@gmail.com">uchechukwuonwuegbuna@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/ucmore01" target="_blank">github.com/ucmore01</a></p>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:uchechukwuonwuegbuna@gmail.com">uchechukwuonwuegbuna@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/ucmore01">github.com/ucmore01</a></p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Uchechukwu Anthony. All rights reserved.</p>
