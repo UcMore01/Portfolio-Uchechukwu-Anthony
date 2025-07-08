@@ -1,50 +1,219 @@
+/* style.css */
+
+/* Base styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   margin: 0;
-  background: #f7f7f7;
-  color: #222;
+  background: #f5f7fa;
+  color: #23272f;
+  line-height: 1.7;
 }
+
+/* Header */
 header {
-  background-color: #222;
+  background: #222e3c;
   color: #fff;
+  padding: 2.5rem 0 1.5rem 0;
   text-align: center;
-  padding: 2rem 0 1rem;
+  box-shadow: 0 2px 8px rgba(40, 52, 70, 0.05);
 }
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+  color: #b0c4d6;
+}
+
+/* Navigation */
+nav {
+  background: #1a2230;
+  box-shadow: 0 2px 8px rgba(40, 52, 70, 0.03);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  display: block;
+  color: #b0c4d6;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover, nav a:focus {
+  color: #5db7de;
+  border-bottom: 2px solid #5db7de;
+}
+
+/* Main Container Sections */
+section {
+  max-width: 780px;
+  margin: 2.5rem auto;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(40, 52, 70, 0.06);
+  padding: 2rem 2.5rem 2rem 2.5rem;
 }
-section {
-  margin-bottom: 2rem;
+
+section h2 {
+  color: #1a2230;
+  margin-top: 0;
+  font-size: 1.7rem;
+  border-left: 4px solid #5db7de;
+  padding-left: 0.7rem;
+  letter-spacing: 1px;
 }
-h2 {
-  color: #1e7fc1;
+
+/* Skills List */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
 }
-.project-video {
-  margin-bottom: 2rem;
+
+#skills li {
+  background: #eaf1f7;
+  color: #1a2230;
+  padding: 0.4rem 1.1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  list-style: none;
+  transition: background 0.2s;
 }
-.project-video video {
-  width: 100%;
-  max-width: 480px;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto 0.5rem;
-}
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: #222;
+
+#skills li:hover {
+  background: #5db7de;
   color: #fff;
+}
+
+/* Projects */
+.project {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1rem;
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.project h3 {
+  margin: 0 0 0.3rem 0;
+  color: #1a2230;
+  font-size: 1.2rem;
+}
+
+.project p {
+  margin: 0 0 0.4rem 0;
+  color: #314057;
+}
+
+.project a {
+  color: #5db7de;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.project a:hover {
+  color: #217ea0;
+  text-decoration: underline;
+}
+
+/* Video Gallery */
+h2 + h2 {
   margin-top: 2rem;
 }
-a {
-  color: #1e7fc1;
-  text-decoration: none;
+
+.project-video, .project-videos {
+  margin-bottom: 2rem;
+  text-align: center;
 }
-a:hover {
+
+.project-video video, .project-videos video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(40, 52, 70, 0.10);
+  margin-bottom: 0.7rem;
+}
+
+.project-video p, .project-videos p {
+  color: #314057;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+}
+
+#projects h2 {
+  margin-bottom: 1.2rem;
+}
+
+/* Contact Section */
+#contact p {
+  margin: 0.3rem 0;
+}
+
+#contact a {
+  color: #5db7de;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+#contact a:hover {
+  color: #217ea0;
   text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #222e3c;
+  color: #b0c4d6;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  section {
+    max-width: 98%;
+    padding: 1.1rem 1rem;
+  }
+  header {
+    padding: 1.7rem 0 1rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  section {
+    padding: 1.1rem 0.5rem;
+  }
+  .project-video video, .project-videos video {
+    max-width: 100%;
+  }
 }
